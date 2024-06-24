@@ -94,10 +94,10 @@
                     <connections>
                         <outlet property="closeButton" destination="cGN-pU-ZjB" id="QLI-8i-QhJ"/>
                         <outlet property="containerView" destination="dWh-TA-tEU" id="O8o-55-uwt"/>
-                        <outlet property="imageView" destination="ID3-2u-4PW" id="3n9-dW-Mcv"/>
                         <outlet property="labelHeightConstraint" destination="hD5-Kh-GlL" id="mTl-ly-in0"/>
                         <outlet property="quoteLabel" destination="NGT-fr-BQa" id="Xl2-sp-nLM"/>
                         <outlet property="rewardBottomBanner" destination="U7n-Cf-3p3" id="HzH-cO-aVI"/>
+                        <outlet property="rewardMidBanner" destination="ID3-2u-4PW" id="Spd-ez-VeN"/>
                         <outlet property="rewardTopBanner" destination="ePC-oR-0jr" id="m4v-z5-dzY"/>
                     </connections>
                 </viewController>
