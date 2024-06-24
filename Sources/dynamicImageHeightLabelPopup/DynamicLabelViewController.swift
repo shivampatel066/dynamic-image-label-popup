@@ -17,6 +17,7 @@ public class DynamicLabelViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        closeButton.setTitle("", for: .normal)
         quoteLabel.heightConstraint = self.labelHeightConstraint
         quoteLabel.text = quoteText
         
@@ -43,6 +44,7 @@ public class DynamicLabelViewController: UIViewController {
         dynamicLabelVC.midImage = midImage ?? UIImage(named: "rewardMidBanner")
         dynamicLabelVC.bottomImage = bottomImage ?? UIImage(named: "rewardBottomBanner")
         dynamicLabelVC.modalTransitionStyle = .crossDissolve
+        dynamicLabelVC.modalPresentationStyle = .overCurrentContext
         viewController.present(dynamicLabelVC, animated: true, completion: nil)
     }
     
