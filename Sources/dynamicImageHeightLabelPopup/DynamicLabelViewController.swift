@@ -8,7 +8,9 @@ public class DynamicLabelViewController: UIViewController {
     @IBOutlet public weak var imageView: UIImageView!
     @IBOutlet public weak var quoteLabel: AdjustableHeightLabel!
     @IBOutlet public weak var labelHeightConstraint: NSLayoutConstraint!
-    @IBOutlet public weak var closeButton: UIButton!  // Outlet for the close button
+    @IBOutlet public weak var closeButton: UIButton!
+    @IBOutlet weak var rewardBottomBanner: UIImageView!
+    @IBOutlet weak var rewardTopBanner: UIImageView!
     
     public var quoteText = ""
     public var topImage: UIImage?
@@ -17,19 +19,48 @@ public class DynamicLabelViewController: UIViewController {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        let blurEffectView: UIVisualEffectView?
+        let blurEffect = UIBlurEffect(style: .systemChromeMaterialDark)
+        blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView?.frame = view.bounds
+        blurEffectView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        if let blurEffectView = blurEffectView {
+            view.addSubview(blurEffectView)
+            scaleToFillView(blurEffectView, in: view)
+            fadeInView(blurEffectView)
+        }
         closeButton.setTitle("", for: .normal)
+        closeButton.tintColor = .white
         quoteLabel.heightConstraint = self.labelHeightConstraint
         quoteLabel.text = quoteText
+        // Bring all other subviews to the front except the blur effect view
+        for subview in view.subviews {
+            if !(subview is UIVisualEffectView) {
+                view.bringSubviewToFront(subview)
+            }
+        }
+    }
+    
+    private func scaleToFillView(_ view: UIView, in parent: UIView) {
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        setupGestureRecognizers()
+        NSLayoutConstraint.activate(
+            [
+                view.leadingAnchor.constraint(equalTo: parent.leadingAnchor),
+                view.trailingAnchor.constraint(equalTo: parent.trailingAnchor),
+                view.widthAnchor.constraint(equalTo: parent.widthAnchor),
+                view.heightAnchor.constraint(equalTo: parent.heightAnchor)
+            ]
+        )
     }
-    private func setupGestureRecognizers() {
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
-        view.addGestureRecognizer(tapGestureRecognizer)
+    
+    func fadeInView(_ view: UIView) {
+        view.alpha = 0
+        UIView.animate(withDuration: 1, delay: 0, options: .curveEaseInOut, animations: {
+            view.alpha = 1
+        }, completion: nil)
     }
-    @objc private func handleTap() {
-        dismiss(animated: true, completion: nil)
-    }
+    
     @IBAction func closeButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
