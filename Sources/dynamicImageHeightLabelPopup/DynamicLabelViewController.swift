@@ -17,7 +17,7 @@ public class DynamicLabelViewController: UIViewController {
     
     // MARK: - Properties
     
-    public var quoteText = ""
+    public var quoteText = "This is a dynamically adjusted height label!"
     public var topImage: UIImage?
     public var midImage: UIImage?
     public var bottomImage: UIImage?

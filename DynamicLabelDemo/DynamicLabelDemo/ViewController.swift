@@ -21,6 +21,5 @@ class ViewController: UIViewController {
         let bottomImage = UIImage(named: "rewardBottomBanner")
         DynamicLabelViewController.present(from: self, quoteText: "This is a dynamically adjusted height label!", topImage: topImage, midImage: midImage, bottomImage: bottomImage)
     }
-    
 }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad12_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -13,20 +14,21 @@
             <objects>
                 <viewController storyboardIdentifier="DynamicLabelViewController" id="HpR-uX-afo" customClass="DynamicLabelViewController" customModule="dynamicImageHeightLabelPopup" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fki-fU-Tz4">
-                        <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-TA-tEU">
-                                <rect key="frame" x="118" y="454" width="1130" height="116"/>
+                                <rect key="frame" x="30.333333333333343" y="408" width="369.33333333333326" height="116"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewardMidBanner" translatesAutoresizingMaskIntoConstraints="NO" id="ID3-2u-4PW">
-                                        <rect key="frame" x="0.0" y="0.0" width="1130" height="116"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="369.33333333333331" height="116"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGT-fr-BQa" customClass="AdjustableHeightLabel" customModule="dynamicImageHeightLabelPopup">
-                                        <rect key="frame" x="87" y="8" width="956" height="100"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGT-fr-BQa" customClass="AdjustableHeightLabel" customModule="dynamicImageHeightLabelPopup">
+                                        <rect key="frame" x="34.333333333333343" y="8" width="301" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="hD5-Kh-GlL"/>
                                         </constraints>
+                                        <mutableString key="text">kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd  kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsda asdasdasd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd v v v kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd v kaskkdasd laksdaksdl alsdn lasdlkasd asld alsdn lansdl asd alsd lamsd malsd v</mutableString>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -49,19 +51,19 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewardBottomBanner" translatesAutoresizingMaskIntoConstraints="NO" id="U7n-Cf-3p3">
-                                <rect key="frame" x="117" y="570" width="1132" height="69"/>
+                                <rect key="frame" x="29.333333333333343" y="524" width="371.33333333333326" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="wbj-0J-ULC"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rewardTopBanner" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-oR-0jr">
-                                <rect key="frame" x="117" y="385" width="1132" height="69"/>
+                                <rect key="frame" x="29.333333333333343" y="339" width="371.33333333333326" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="FPT-If-J5u"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cGN-pU-ZjB">
-                                <rect key="frame" x="1209" y="385" width="40" height="40"/>
+                                <rect key="frame" x="360.66666666666669" y="339" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JFS-QW-Swl"/>
                                     <constraint firstAttribute="width" constant="40" id="ekG-se-Jlj"/>
