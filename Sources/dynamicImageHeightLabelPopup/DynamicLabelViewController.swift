@@ -21,6 +21,7 @@ public class DynamicLabelViewController: UIViewController {
     public var topImage: UIImage?
     public var midImage: UIImage?
     public var bottomImage: UIImage?
+    static private var backButtonCompletion: (() -> Void)? = nil
     
     // MARK: - Lifecycle
     
@@ -115,7 +116,7 @@ public class DynamicLabelViewController: UIViewController {
     /// Action for close button tap.
     /// - Parameter sender: The button that triggered the action.
     @IBAction func closeButtonTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true, completion: DynamicLabelViewController.backButtonCompletion)
     }
     
     // MARK: - Static Methods
@@ -127,7 +128,7 @@ public class DynamicLabelViewController: UIViewController {
     ///   - topImage: The top banner image.
     ///   - midImage: The middle banner image.
     ///   - bottomImage: The bottom banner image.
-    public static func present(from viewController: UIViewController, quoteText: String, topImage: UIImage?, midImage: UIImage?, bottomImage: UIImage?) {
+    public static func present(from viewController: UIViewController, quoteText: String, topImage: UIImage?, midImage: UIImage?, bottomImage: UIImage?, backButtonCompletion: (() -> Void)? = nil) {
         let storyboard = UIStoryboard(name: "DynamicLabelViewController", bundle: .module)
         guard let dynamicLabelVC = storyboard.instantiateViewController(withIdentifier: "DynamicLabelViewController") as? DynamicLabelViewController else {
             fatalError("Unable to instantiate DynamicLabelViewController from storyboard")
@@ -139,6 +140,7 @@ public class DynamicLabelViewController: UIViewController {
         dynamicLabelVC.modalTransitionStyle = .crossDissolve
         dynamicLabelVC.modalPresentationStyle = .overCurrentContext
         viewController.present(dynamicLabelVC, animated: true, completion: nil)
+        self.backButtonCompletion = backButtonCompletion
     }
 }
 
